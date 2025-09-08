@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import VideoBackgroundWrapper from "../UI/VideoBackgroundWrapper";
 
 const FindWorkSection = () => {
@@ -16,9 +16,14 @@ const FindWorkSection = () => {
           </p>
         </div>
         <div className="">
-          <VideoBackgroundWrapper videoPath="/videos/screen_rec_1.mp4" className="max-w-[620px] h-[620px] mt-8">
-            <div className="h-full w-full px-[40vw]">video</div>
-          </VideoBackgroundWrapper>
+          <Suspense>
+            <VideoBackgroundWrapper
+              videoPath="/videos/screen_rec_1.mp4"
+              className="max-w-[620px] h-[620px] mt-8"
+            >
+              <div className="h-full w-full px-[40vw]">video</div>
+            </VideoBackgroundWrapper>
+          </Suspense>
         </div>
       </div>
     </div>

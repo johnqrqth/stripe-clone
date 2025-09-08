@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, ReactNode,  Suspense } from "react";
+import React, { useState, ReactNode, Suspense } from "react";
 
 interface VideoBackgroundWrapperProps {
   videoPath: string;
@@ -53,27 +53,25 @@ const VideoBackgroundWrapper: React.FC<VideoBackgroundWrapperProps> = ({
 
       {shouldShowVideo && !videoError && (
         <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
-          <Suspense>
-            <video
-              autoPlay={autoPlay}
-              muted={muted}
-              loop={loop}
-              playsInline={playsInline}
-              onLoadedData={() => setVideoLoaded(true)}
-              onError={() => setVideoError(true)}
-              className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-1000 ${
-                videoLoaded ? "opacity-100" : "opacity-0"
-              }`}
-              preload="metadata"
-            >
-              <source src={videoPath} type="video/mp4" />
-              <source
-                src={videoPath.replace(".mp4", ".webm")}
-                type="video/webm"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </Suspense>
+          <video
+            autoPlay={autoPlay}
+            muted={muted}
+            loop={loop}
+            playsInline={playsInline}
+            onLoadedData={() => setVideoLoaded(true)}
+            onError={() => setVideoError(true)}
+            className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-1000 ${
+              videoLoaded ? "opacity-100" : "opacity-0"
+            }`}
+            preload="metadata"
+          >
+            <source src={videoPath} type="video/mp4" />
+            <source
+              src={videoPath.replace(".mp4", ".webm")}
+              type="video/webm"
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
       )}
 

@@ -1,6 +1,6 @@
 import { MeshGradient } from "@mesh-gradient/react";
 import { type MeshGradientOptions } from "@mesh-gradient/core";
-import React from "react";
+import React, { Suspense } from "react";
 import Button from "../UI/Button";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Image from "next/image";
@@ -52,12 +52,14 @@ const HeroSection = () => {
 
             <div className="hidden md:block relative col-span-3">
               <div>
-                <Image
-                  src="/hero_image.png"
-                  alt="hero image"
-                  fill
-                  className="object-cover object-left-top overflow-visible"
-                />
+                <Suspense>
+                  <Image
+                    src="/hero_image.png"
+                    alt="hero image"
+                    fill
+                    className="object-cover object-left-top overflow-visible"
+                  />
+                </Suspense>
               </div>
             </div>
           </div>
