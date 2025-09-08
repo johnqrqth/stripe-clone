@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import VideoBackgroundWrapper from "../UI/VideoBackgroundWrapper";
 import Button from "../UI/Button";
 import RotatingForm from "../UI/RotatingForm";

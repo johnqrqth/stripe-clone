@@ -28,6 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
       authors: [{ name: "John Thiongo", url: "https://sque-stripeclone.com" }],
     };
   } catch (error) {
+    console.error("Error generating metadata:", error);
     return {};
   }
 }

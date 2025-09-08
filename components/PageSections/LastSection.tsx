@@ -4,7 +4,8 @@ import { type MeshGradientOptions } from "@mesh-gradient/core";
 
 const gradientOptions: MeshGradientOptions = {
   colors: ["#a960ee", "#ff333d", "#90e0ff", "#ffcb57"],
-  animationSpeed: 0.003,
+  animationSpeed: 1.6,
+  frequency: 0.00022,
 };
 
 const LastSection = () => {

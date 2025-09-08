@@ -1,8 +1,16 @@
 "use client";
-import React, { Suspense } from "react";
-import { ReactTyped } from "react-typed";
+import React, { Suspense, useMemo } from "react";
+import Typewriter from "typewriter-effect";
 
 const GhostTypedInput = () => {
+  const typedStrings = useMemo(() => {
+    return [
+      "Log all calls for today",
+      "Generate conflict checks...",
+      "Remind me to review smith and jones inv...",
+      "Send a client email summary",
+    ];
+  }, []);
   return (
     <Suspense
       fallback={
@@ -12,17 +20,12 @@ const GhostTypedInput = () => {
       }
     >
       <div className="w-[70%] py-3 text-white bg-black/20 rounded-full text-center">
-        <ReactTyped
-          strings={[
-            "Log all calls for today",
-            "Generate conflict checks...",
-            "Remind me to review smith and jones inv...",
-            "Send a client email summary",
-          ]}
-        //   typeSpeed={40}
-        //   backSpeed={50}
-          attr="placeholder"
-          loop
+        <Typewriter
+          options={{
+            strings: typedStrings,
+            autoStart: true,
+            loop: true,
+          }}
         />
       </div>
     </Suspense>

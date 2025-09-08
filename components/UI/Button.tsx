@@ -9,7 +9,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', icon, onClick, className = '' }) => {
-  let baseClasses = "inline-flex items-center px-6 py-3 text-base font-medium rounded-full shadow-sm transition-all duration-300 ease-in-out";
+  const baseClasses = "inline-flex items-center px-6 py-3 text-base font-medium rounded-full shadow-sm transition-all duration-300 ease-in-out";
   let variantClasses = "";
 
   switch (variant) {

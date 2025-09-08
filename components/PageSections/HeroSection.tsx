@@ -28,7 +28,7 @@ const HeroSection = () => {
           <div className="grid gap-8 max-w-4xl mx-auto md:grid-cols-8 md:max-w-7xl md:gap-x-16">
             <div className="flex flex-col items-start justify-center col-span-5">
               <p className="text-[#3a3a3a] text-[clamp(3.5rem,4vw,3rem)] md:text-[70px] font-bold text-left">
-                Stop Losing Billable Time You've Already Earned
+                Stop Losing Billable Time You&apos;ve Already Earned
               </p>
               <p className="text-[#425466] text-lg text-left mt-4">
                 Sque is the Legal Revenue & Operating System — it captures work

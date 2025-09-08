@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 import Logo from "./Logo";
 

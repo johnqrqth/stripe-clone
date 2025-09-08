@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, ReactNode, use, Suspense } from "react";
+import React, { useState, ReactNode,  Suspense } from "react";
 
 interface VideoBackgroundWrapperProps {
   videoPath: string;

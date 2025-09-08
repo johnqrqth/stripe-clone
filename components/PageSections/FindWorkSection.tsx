@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import VideoBackgroundWrapper from "../UI/VideoBackgroundWrapper";
 
 const FindWorkSection = () => {

@@ -1,5 +1,4 @@
 import React from "react";
-import { FaPlus } from "react-icons/fa";
 import SageInput from "../UI/SageInput";
 import MissionControlCard from "../UI/MissionControlCard";
 
